@@ -70,10 +70,13 @@ def answer_question(
         yield finish(_result("not_found", message=NOT_FOUND_MESSAGE))
         return
 
+    rejected: list[str] = []  # the previous draft's unsupported sentences, fed to the retry
     for attempt in range(1, MAX_ATTEMPTS + 1):
         trace["attempts"] = attempt
         yield _stage("generating", attempt)
-        draft = generate_answer(llm, settings, question, retrieval.chunks, retry=attempt > 1)
+        draft = generate_answer(
+            llm, settings, question, retrieval.chunks, retry=attempt > 1, rejected=rejected
+        )
         if not draft.usable or not draft.citations:
             # Nothing citable: the model found no answer (or answered from outside the documents).
             trace["reason"] = "no_citations" if draft.usable else "model_declined"
@@ -87,6 +90,7 @@ def answer_question(
         trace["verdicts"] = [v for _, v in assessment.sentences]
         if assessment.status != "rejected":
             break
+        rejected = [s.text for s, verdict in assessment.sentences if verdict == "unsupported"]
         log.warning("draft rejected by guardrails", extra={"attempt": attempt, **trace})
 
     if assessment.status in ("rejected", "not_found"):

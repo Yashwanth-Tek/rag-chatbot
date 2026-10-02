@@ -120,7 +120,9 @@ def test_rejected_draft_is_regenerated_once_and_the_clean_retry_is_shown(make_cl
 
     assert result["status"] == "answered"
     assert result["segments"][0]["text"] == "The company was founded in 2015."
-    assert "previous answer" in claude.answer_requests[1]["messages"][0]["content"][-1]["text"]
+    retry_note = claude.answer_requests[1]["messages"][0]["content"][-1]["text"]
+    assert "previous answer" in retry_note
+    assert "- Founded in 2015 by Ravi Kumar." in retry_note  # the retry is told what failed
 
 
 def test_5_injected_instructions_in_a_document_cannot_reach_the_user(make_client, upload, ask):

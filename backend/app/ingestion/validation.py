@@ -25,6 +25,9 @@ MAX_FILENAME_LENGTH = 200
 # A DOCX is a zip archive: refuse archives that would inflate far beyond the upload limit.
 DOCX_MAX_EXPANSION = 20
 DOCX_MAX_ENTRIES = 2000
+# The XML parts are what the parser loads and walks in memory. Embedded images can make a DOCX
+# legitimately large, but its text XML never needs to be this big, whatever the upload limit is.
+DOCX_MAX_XML_BYTES = 256 * 1024 * 1024
 
 
 @dataclass(frozen=True)
@@ -95,7 +98,12 @@ def _check_docx(data: bytes, max_bytes: int) -> None:
     if not any(entry.filename == "word/document.xml" for entry in entries):
         raise _type_mismatch("DOCX")
     uncompressed = sum(entry.file_size for entry in entries)
-    if len(entries) > DOCX_MAX_ENTRIES or uncompressed > max_bytes * DOCX_MAX_EXPANSION:
+    xml = sum(entry.file_size for entry in entries if entry.filename.endswith((".xml", ".rels")))
+    if (
+        len(entries) > DOCX_MAX_ENTRIES
+        or uncompressed > max_bytes * DOCX_MAX_EXPANSION
+        or xml > DOCX_MAX_XML_BYTES
+    ):
         raise AppError("UNSAFE_FILE", "This DOCX file expands to an unsafe size and was rejected.")
 
 

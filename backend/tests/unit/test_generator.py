@@ -55,6 +55,20 @@ def test_retry_adds_the_rejection_note():
     assert "previous answer" in claude.answer_requests[0]["messages"][0]["content"][-1]["text"]
 
 
+def test_retry_lists_the_rejected_sentences():
+    claude = FakeClaude(answers=[[("x", 0)]])
+    generate_answer(claude, SETTINGS, "q", CHUNKS, retry=True, rejected=["It was founded by Ravi."])
+    note = claude.answer_requests[0]["messages"][0]["content"][-1]["text"]
+    assert "were rejected" in note
+    assert "- It was founded by Ravi." in note
+
+
+def test_first_attempt_has_no_rejection_note():
+    claude = FakeClaude(answers=[[("x", 0)]])
+    generate_answer(claude, SETTINGS, "q", CHUNKS)
+    assert claude.answer_requests[0]["messages"][0]["content"][-1]["text"] == "Question: q"
+
+
 def test_api_errors_become_safe_app_errors():
     def unreachable(**_request):
         request = httpx2.Request("POST", "https://api.anthropic.com/v1/messages")

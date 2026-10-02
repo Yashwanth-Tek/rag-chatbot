@@ -5,13 +5,14 @@ cited text, so the model cannot invent a source; guardrails.py decides what the 
 """
 
 import logging
+from collections.abc import Sequence
 from dataclasses import dataclass
 
 import anthropic
 
 from app.config import Settings
 from app.llm import FALLBACK_BETA, to_app_error
-from app.rag.prompts import ANSWER_SYSTEM_PROMPT, RETRY_NOTE
+from app.rag.prompts import ANSWER_SYSTEM_PROMPT, REJECTED_SENTENCES_NOTE, RETRY_NOTE
 from app.rag.retriever import RetrievedChunk, location_label
 
 log = logging.getLogger(__name__)
@@ -41,11 +42,17 @@ def generate_answer(
     chunks: list[RetrievedChunk],
     *,
     retry: bool = False,
+    rejected: Sequence[str] = (),
 ) -> Draft:
+    """`rejected`: on a retry, the previous draft's unsupported sentences, so the model knows
+    exactly what to drop or fix rather than only that something was wrong."""
+    note = ""
+    if retry:
+        note = RETRY_NOTE
+        if rejected:
+            note += REJECTED_SENTENCES_NOTE.format(sentences="\n".join(f"- {s}" for s in rejected))
     content = [_document_block(chunk) for chunk in chunks]
-    content.append(
-        {"type": "text", "text": f"Question: {question}" + (RETRY_NOTE if retry else "")}
-    )
+    content.append({"type": "text", "text": f"Question: {question}{note}"})
     try:
         response = client.beta.messages.create(
             model=settings.anthropic_model,

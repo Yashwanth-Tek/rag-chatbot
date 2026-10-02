@@ -1,0 +1,128 @@
+[
+  {
+    "product_id": "BW-PL-01",
+    "name": "Personal Loan",
+    "apr_percent": {
+      "min": 8.49,
+      "max": 21.99
+    },
+    "term_months": [
+      24,
+      36,
+      48,
+      60
+    ],
+    "amount_usd": {
+      "min": 2000,
+      "max": 50000
+    },
+    "minimum_credit_score": 640,
+    "origination_fee_percent": 1.5,
+    "prepayment_penalty": false,
+    "notes": "Funds are usually paid out within 2 business days of approval."
+  },
+  {
+    "product_id": "BW-AL-02",
+    "name": "Auto Loan",
+    "apr_percent": {
+      "min": 5.99,
+      "max": 14.49
+    },
+    "term_months": [
+      36,
+      48,
+      60,
+      72
+    ],
+    "amount_usd": {
+      "min": 5000,
+      "max": 100000
+    },
+    "minimum_credit_score": 620,
+    "origination_fee_percent": 0,
+    "prepayment_penalty": false,
+    "notes": "New and used vehicles up to 8 years old. The vehicle secures the loan."
+  },
+  {
+    "product_id": "BW-HM-03",
+    "name": "30-Year Fixed Mortgage",
+    "apr_percent": {
+      "min": 6.12,
+      "max": 7.35
+    },
+    "term_months": [
+      360
+    ],
+    "amount_usd": {
+      "min": 75000,
+      "max": 1500000
+    },
+    "minimum_credit_score": 680,
+    "origination_fee_percent": 0.75,
+    "prepayment_penalty": false,
+    "notes": "Minimum down payment is 5 percent. Private mortgage insurance applies below 20 percent down."
+  },
+  {
+    "product_id": "BW-HE-04",
+    "name": "Home Equity Line of Credit",
+    "apr_percent": {
+      "min": 7.75,
+      "max": 10.25
+    },
+    "term_months": [
+      120,
+      240
+    ],
+    "amount_usd": {
+      "min": 10000,
+      "max": 400000
+    },
+    "minimum_credit_score": 700,
+    "origination_fee_percent": 0,
+    "prepayment_penalty": true,
+    "notes": "Variable rate. Borrow up to 85 percent of the home's value minus the mortgage balance. A $350 fee applies if the line is closed within 3 years."
+  },
+  {
+    "product_id": "BW-SB-05",
+    "name": "Small Business Term Loan",
+    "apr_percent": {
+      "min": 9.25,
+      "max": 18.75
+    },
+    "term_months": [
+      12,
+      24,
+      36,
+      60
+    ],
+    "amount_usd": {
+      "min": 25000,
+      "max": 750000
+    },
+    "minimum_credit_score": 660,
+    "origination_fee_percent": 2.0,
+    "prepayment_penalty": false,
+    "notes": "The business must have traded for at least 2 years with annual revenue of at least $250,000."
+  },
+  {
+    "product_id": "BW-SR-06",
+    "name": "Student Loan Refinance",
+    "apr_percent": {
+      "min": 4.99,
+      "max": 9.99
+    },
+    "term_months": [
+      60,
+      120,
+      180
+    ],
+    "amount_usd": {
+      "min": 5000,
+      "max": 300000
+    },
+    "minimum_credit_score": 680,
+    "origination_fee_percent": 0,
+    "prepayment_penalty": false,
+    "notes": "Requires a completed degree. A 0.25 percent rate discount applies with autopay."
+  }
+]

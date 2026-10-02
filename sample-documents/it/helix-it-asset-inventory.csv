@@ -1,0 +1,21 @@
+Asset tag,Type,Model,Department,Location,Purchase date,Warranty end,Status,Operating system
+HX-LT-1001,Laptop,Dell Latitude 7450,Engineering,Austin office,2025-02-11,2028-02-11,In use,Windows 11 Enterprise
+HX-LT-1002,Laptop,Apple MacBook Pro 14 (M3),Engineering,Remote,2024-09-03,2027-09-03,In use,macOS 15
+HX-LT-1003,Laptop,Lenovo ThinkPad T14 Gen 5,Finance,Austin office,2025-06-20,2028-06-20,In use,Windows 11 Enterprise
+HX-LT-1004,Laptop,Dell Latitude 5430,Sales,Denver office,2022-03-15,2025-03-15,In use,Windows 11 Pro
+HX-LT-1005,Laptop,Apple MacBook Air 13 (M2),Marketing,Remote,2023-05-08,2026-05-08,In repair,macOS 15
+HX-LT-1006,Laptop,Lenovo ThinkPad X1 Carbon Gen 12,Executive,Austin office,2025-01-27,2028-01-27,In use,Windows 11 Enterprise
+HX-LT-1007,Laptop,Dell Latitude 7450,Support,Denver office,2025-02-11,2028-02-11,Lost,Windows 11 Enterprise
+HX-LT-1008,Laptop,Apple MacBook Pro 16 (M3 Max),Design,Remote,2024-11-12,2027-11-12,In use,macOS 15
+HX-LT-1009,Laptop,Dell Latitude 5430,Support,Denver office,2022-03-15,2025-03-15,Spare,Windows 11 Pro
+HX-LT-1010,Laptop,Lenovo ThinkPad T14 Gen 5,HR,Austin office,2025-06-20,2028-06-20,In use,Windows 11 Enterprise
+HX-SV-2001,Server,Dell PowerEdge R760,Infrastructure,Austin data center,2024-04-02,2029-04-02,In use,Ubuntu Server 24.04 LTS
+HX-SV-2002,Server,Dell PowerEdge R760,Infrastructure,Austin data center,2024-04-02,2029-04-02,In use,Ubuntu Server 24.04 LTS
+HX-SV-2003,Server,HPE ProLiant DL380 Gen10,Infrastructure,Austin data center,2020-08-19,2025-08-19,Retired,Red Hat Enterprise Linux 8
+HX-NW-3001,Network switch,Cisco Catalyst 9300,Infrastructure,Austin data center,2023-10-10,2028-10-10,In use,Cisco IOS XE 17
+HX-NW-3002,Firewall,Palo Alto PA-3410,Infrastructure,Austin data center,2024-01-22,2027-01-22,In use,PAN-OS 11
+HX-NW-3003,Wireless access point,Cisco Meraki MR46,Infrastructure,Denver office,2023-07-14,2026-07-14,In use,Meraki firmware
+HX-PR-4001,Printer,HP LaserJet Pro 4001dn,Finance,Austin office,2023-02-01,2026-02-01,In use,Not applicable
+HX-PH-5001,Phone,Apple iPhone 15,Sales,Denver office,2024-10-04,2026-10-04,In use,iOS 19
+HX-PH-5002,Phone,Samsung Galaxy S24,Support,Remote,2024-10-04,2026-10-04,In use,Android 16
+HX-MN-6001,Monitor,Dell UltraSharp U2724D,Design,Austin office,2024-11-12,2027-11-12,In use,Not applicable

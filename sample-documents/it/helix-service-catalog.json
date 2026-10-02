@@ -1,0 +1,80 @@
+[
+  {
+    "service_id": "SVC-001",
+    "name": "Email and calendar",
+    "owner_team": "Workplace IT",
+    "availability_target_percent": 99.9,
+    "support_hours": "24/7",
+    "response_time": {
+      "priority_1": "30 minutes",
+      "priority_2": "4 hours",
+      "priority_3": "2 business days"
+    },
+    "request_channel": "IT service portal",
+    "cost_per_user_per_month_usd": 8.5
+  },
+  {
+    "service_id": "SVC-002",
+    "name": "VPN remote access",
+    "owner_team": "Network Engineering",
+    "availability_target_percent": 99.5,
+    "support_hours": "24/7",
+    "response_time": {
+      "priority_1": "30 minutes",
+      "priority_2": "4 hours",
+      "priority_3": "2 business days"
+    },
+    "request_channel": "IT service portal",
+    "cost_per_user_per_month_usd": 4.0
+  },
+  {
+    "service_id": "SVC-003",
+    "name": "Helix CRM",
+    "owner_team": "Business Applications",
+    "availability_target_percent": 99.95,
+    "support_hours": "24/7",
+    "response_time": {
+      "priority_1": "15 minutes",
+      "priority_2": "2 hours",
+      "priority_3": "1 business day"
+    },
+    "request_channel": "PageRelay for outages, IT service portal for requests",
+    "cost_per_user_per_month_usd": 22.0
+  },
+  {
+    "service_id": "SVC-004",
+    "name": "Laptop provisioning",
+    "owner_team": "Workplace IT",
+    "fulfilment_time": "5 business days",
+    "support_hours": "Monday to Friday, 8:00 to 18:00",
+    "request_channel": "IT service portal (manager approval required)",
+    "notes": "New starters receive a laptop on their first day if HR submits the request at least 5 business days earlier."
+  },
+  {
+    "service_id": "SVC-005",
+    "name": "Password reset and account unlock",
+    "owner_team": "Service Desk",
+    "fulfilment_time": "Immediate (self-service)",
+    "support_hours": "24/7",
+    "request_channel": "HelixVault self-service, or call the Service Desk on extension 4357"
+  },
+  {
+    "service_id": "SVC-006",
+    "name": "Data backup and restore",
+    "owner_team": "Infrastructure",
+    "availability_target_percent": 99.9,
+    "recovery_point_objective": "24 hours",
+    "recovery_time_objective": "8 hours",
+    "retention": "Daily backups kept 35 days, monthly backups kept 7 years",
+    "request_channel": "IT service portal"
+  },
+  {
+    "service_id": "SVC-007",
+    "name": "Software license requests",
+    "owner_team": "IT Asset Management",
+    "fulfilment_time": "3 business days",
+    "support_hours": "Monday to Friday, 8:00 to 18:00",
+    "request_channel": "IT service portal",
+    "notes": "Software outside the company catalog needs Security approval first."
+  }
+]

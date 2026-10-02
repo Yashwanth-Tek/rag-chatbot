@@ -80,6 +80,16 @@ def test_docx_that_inflates_far_beyond_the_limit_is_rejected():
     assert error.code == "UNSAFE_FILE"
 
 
+def test_docx_text_xml_has_an_absolute_ceiling_even_under_a_large_limit(monkeypatch):
+    monkeypatch.setattr("app.ingestion.validation.DOCX_MAX_XML_BYTES", 10_000)
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED) as archive:
+        archive.writestr("word/document.xml", "<w/>" + " " * 20_000)
+    # Well inside a 500 MB upload limit and its 20x expansion allowance, but too much XML.
+    error = rejected("big-text.docx", buffer.getvalue(), limit=500 * 1024 * 1024)
+    assert error.code == "UNSAFE_FILE"
+
+
 @pytest.mark.parametrize("data", ["café".encode("latin-1"), "hi".encode("utf-16"), b"a\x00b"])
 def test_text_that_is_not_utf8_is_rejected(data):
     assert rejected("notes.txt", data).code == "UNSUPPORTED_ENCODING"

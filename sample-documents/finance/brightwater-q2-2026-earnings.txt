@@ -1,0 +1,33 @@
+Brightwater Financial Group - Second Quarter 2026 Results Summary
+Released 30 July 2026
+
+Fictional sample document created for testing the RAG chatbot. All organisations, people, figures and contact details in it are invented.
+
+HEADLINE RESULTS (quarter ended 30 June 2026)
+Total revenue was $412.6 million, up 8.4 percent from $380.6 million in the second quarter of 2025.
+Net income was $68.3 million, up 11.2 percent year over year.
+Diluted earnings per share were $1.42, compared with $1.27 a year earlier.
+Return on equity was 13.8 percent.
+
+REVENUE BY SEGMENT
+Retail Banking: $198.1 million (up 6.1 percent). Deposits grew to $21.4 billion.
+Wealth Management: $121.4 million (up 14.9 percent). Assets under management reached $58.7 billion.
+Commercial Lending: $93.1 million (up 5.2 percent). The loan book stood at $9.8 billion.
+
+KEY RATIOS
+Net interest margin: 3.21 percent (3.08 percent in Q2 2025).
+Efficiency ratio: 57.4 percent (59.9 percent in Q2 2025).
+Common equity tier 1 (CET1) capital ratio: 12.6 percent.
+Non-performing loans: 0.84 percent of total loans.
+
+CAPITAL RETURNS
+The board declared a quarterly dividend of $0.38 per share, payable on 15 September 2026, and approved a share buyback of up to $150 million over the next 12 months.
+
+OUTLOOK
+Brightwater raised its full-year 2026 revenue guidance to between $1.62 billion and $1.66 billion, from $1.58 billion to $1.63 billion previously. Expenses are expected to grow by 3 to 4 percent for the year.
+
+CHIEF EXECUTIVE'S COMMENT
+"Wealth Management delivered its strongest quarter on record, and disciplined cost control lifted our efficiency ratio below 58 percent for the first time," said Chief Executive Officer Dana Whitfield.
+
+RISKS
+Results could be affected by changes in interest rates, a slowdown in commercial real estate, higher credit losses, cybersecurity incidents and new regulation. These forward-looking statements are not guarantees of future performance.

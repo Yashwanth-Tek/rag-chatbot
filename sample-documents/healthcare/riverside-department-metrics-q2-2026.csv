@@ -1,0 +1,19 @@
+Department,Month,Admissions,Average length of stay (days),Bed occupancy (%),30-day readmission rate (%),Patient satisfaction (out of 5)
+Cardiology,April 2026,400,4.9,87.3,13.5,4.2
+Cardiology,May 2026,412,4.8,88.5,13.1,4.3
+Cardiology,June 2026,428,4.7,89.9,12.6,4.4
+Orthopedics,April 2026,289,3.7,80.0,7.8,4.4
+Orthopedics,May 2026,298,3.6,81.2,7.4,4.5
+Orthopedics,June 2026,310,3.5,82.6,6.9,4.6
+Pediatrics,April 2026,224,3.0,71.2,5.6,4.6
+Pediatrics,May 2026,231,2.9,72.4,5.2,4.7
+Pediatrics,June 2026,240,2.8,73.8,4.7,4.8
+Oncology,April 2026,180,6.3,90.1,16.2,4.3
+Oncology,May 2026,186,6.2,91.3,15.8,4.4
+Oncology,June 2026,193,6.1,92.7,15.3,4.5
+Emergency,April 2026,1203,0.7,93.9,10.3,3.7
+Emergency,May 2026,1240,0.6,95.1,9.9,3.8
+Emergency,June 2026,1290,0.5,96.5,9.4,3.9
+Maternity,April 2026,334,2.5,76.4,3.5,4.5
+Maternity,May 2026,344,2.4,77.6,3.1,4.6
+Maternity,June 2026,358,2.3,79.0,2.6,4.7

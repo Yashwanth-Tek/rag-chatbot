@@ -31,7 +31,8 @@ class Settings(BaseSettings):
     anthropic_effort: Literal["low", "medium", "high", "xhigh", "max"]
     anthropic_timeout_seconds: float = Field(gt=0)
 
-    max_upload_mb: int = Field(gt=0, le=100)
+    # Uploads are held in memory while they're validated and parsed; 1 GB is a sanity ceiling.
+    max_upload_mb: int = Field(gt=0, le=1024)
     chunk_size_chars: int = Field(ge=200, le=8000)
     chunk_overlap_chars: int = Field(ge=0)
 
